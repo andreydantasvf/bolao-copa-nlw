@@ -145,6 +145,8 @@ export async function poolRoutes(fastify: FastifyInstance) {
                 }
             }
         })
+
+        return { pools }
     })
 
     fastify.get('/pools/:id', {
@@ -186,5 +188,7 @@ export async function poolRoutes(fastify: FastifyInstance) {
                 }
             }
         })
+
+        return { pool }
     })
 }

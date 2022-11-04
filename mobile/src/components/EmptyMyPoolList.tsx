@@ -1,3 +1,4 @@
+import { Share } from 'react-native';
 import { Row, Text, Pressable } from 'native-base';
 
 interface Props {
@@ -5,6 +6,12 @@ interface Props {
 }
 
 export function EmptyMyPoolList({ code }: Props) {
+  async function handlCodeShare() {
+    await Share.share({
+        message: code
+    })
+}
+
   return (
     <Row flexWrap="wrap" justifyContent="center" p={4}>
       <Text color="gray.200" fontSize="sm">
